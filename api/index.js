@@ -1,42 +1,46 @@
-import express from 'express'
+// import express from 'express'
 
-const app = express()
-const app = require('../server.js');
-
-
-app.use(express.json())
+// const app = express()
+// const test = require('../server.js');
 
 
-
-app.get('/', (req, res) => {
-  res.json({
-    message: 'API is running on Vercel',
-    routes: ['/health', '/api/hello', '/api/echo'],
-  })
-})
-
-app.get('/health', (req, res) => {
-  res.json({
-    status: 'ok',
-    uptime: process.uptime(),
-    timestamp: new Date().toISOString(),
-  })
-})
-
-app.get('/api/hello', (req, res) => {
-  const name = req.query.name || 'World'
-
-  res.json({
-    message: `Hello, ${name}!`,
-  })
-})
-
-app.post('/api/echo', (req, res) => {
-  res.json({
-    received: req.body,
-  })
-})
+// app.use(express.json())
 
 
 
-export default app
+// app.get('/', (req, res) => {
+//   res.json({
+//     message: 'API is running on Vercel',
+//     routes: ['/health', '/api/hello', '/api/echo'],
+//   })
+// })
+
+// app.get('/health', (req, res) => {
+//   res.json({
+//     status: 'ok',
+//     uptime: process.uptime(),
+//     timestamp: new Date().toISOString(),
+//   })
+// })
+
+// app.get('/api/hello', (req, res) => {
+//   const name = req.query.name || 'World'
+
+//   res.json({
+//     message: `Hello, ${name}!`,
+//   })
+// })
+
+// app.post('/api/echo', (req, res) => {
+//   res.json({
+//     received: req.body,
+//   })
+// })
+
+
+
+// export default app
+
+import app from '../server.js';
+
+export default app;

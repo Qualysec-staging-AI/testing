@@ -1,12 +1,26 @@
-import app from './api/index.js'
-import express from 'express'
+// import app from './api/index.js'
+// import express from 'express'
 
-const app = express()
-app.use(express.json())
+// const app = express()
+// app.use(express.json())
 
-app.get('/noor', (_ , res)=>{
-    res.json({
-        message : "hyy hyy hyy "
-    })
-})
+// app.get('/noor', (_ , res)=>{
+//     res.json({
+//         message : "hyy hyy hyy "
+//     })
+// })
 
+
+
+import express from "express";
+
+const app = express();
+
+app.use(express.json());
+
+app.get("/noor", (req, res) => {
+  res.json({ message: "hyy hyy hyy" });
+});
+
+// ❗ NO app.listen here for Vercel
+export default app;
