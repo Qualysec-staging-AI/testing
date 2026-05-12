@@ -1,6 +1,7 @@
 import express from 'express'
 
 const app = express()
+const app = require('../server.js');
 
 
 app.use(express.json())
