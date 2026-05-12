@@ -10,6 +10,3 @@ app.get('/noor', (_ , res)=>{
     })
 })
 
-
-
-export default app
